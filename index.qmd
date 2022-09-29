@@ -1,0 +1,93 @@
+---
+title: "STAA 566 Dynamic Figure"
+author: "Delsie Johnson"
+format: html
+editor: visual
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, message=FALSE)
+```
+
+# 2022 WNBA Playoffs: Dynamic Figure
+
+**Data source:** "WNBA_playoffs.csv" from https://stats.wnba.com/players/boxscores-traditional/. csv file included
+
+**What I want to convey:** I want to convey the points in each playoff game for each player of the two WNBA teams who made it to the championship. I want to show how each player varied in points per game and also how each team varied compared to the other team. I want this graph to give insight into how players points in a game changed during the playoffs and if it had any influence on which team won overall. Note: the Las Vegas Aces won the 2022 WNBA championship over the Connecticut Sun.
+
+**Functionality/formatting:** I allow the user to hover over the points in the graph. I do this so they can see more information including the team, player, points, and game date. The user can also hide/show each team. This allows them to only look at the scoring data for one team at a time, which makes the graph less crowded and easier to see if that is what the user wants.
+
+## R Code:
+
+```{r}
+# load libraries
+library(ggplot2)
+library(tidyverse)
+library(ggthemes)
+library(plotly)
+library(htmlwidgets)
+
+# read in data from stats.wnba.com
+WNBA <- read.csv("WNBA_playoffs.csv", header=T)
+WNBA$game_date <- as.Date(WNBA$game_date, format="%m/%d/%y")
+# renaming variables for formatting
+WNBA$Points <- WNBA$pts
+WNBA$Game.Date <- WNBA$game_date
+WNBA$Player <- WNBA$player
+WNBA$Team <- WNBA$team
+
+# create ggplot
+p_playoffs <- ggplot(data=WNBA, aes(x=Game.Date, y=Points, col=Team)) +
+  ### plotting Conneticut data
+  geom_point(data=WNBA %>% filter(Team=="CON"), 
+             aes(group=Player), 
+             position = position_jitter(w = 0.2, h = 0), 
+             alpha=0.6)+
+  # connecting lines of top 2 scorers for Conneticut
+  geom_line(data=WNBA %>% filter(Player=="JONQUEL JONES"),
+            linetype="dashed")+
+  geom_line(data=WNBA %>% filter(Player=="ALYSSA THOMAS"),
+            linetype="dotted")+
+  
+  ### plotting Las Vegas data
+  geom_point(data=WNBA %>% filter(Team=="LVA"),
+             aes(group=Player), 
+             position = position_jitter(w = 0.2, h = 0),
+             alpha=0.6)+
+  # connecting lines of top 2 scorers for Las Vegas
+  geom_line(data=WNBA %>% filter(Player=="CHELSEA GRAY"),
+            linetype="dashed")+
+  geom_line(data=WNBA %>% filter(Player=="A'JA WILSON"), 
+            linetype="dotted")+
+  labs(x="",
+       y="Points", 
+       title="2022 WNBA Playoffs: Las Vegas & Conneticut Points by Players")+
+  theme_classic()+
+  theme(
+        panel.grid.major.y = element_line(linetype = 3, color="grey80"))
+
+# make ggplot dynamic with plotly
+p_playoffs_plotly <- ggplotly(p_playoffs)
+p_playoffs_plotly <- p_playoffs_plotly %>% # adding subtitle using HTML to format text
+  layout(title = list(text = paste0("2022 WNBA Playoffs: Las Vegas & Conneticut Points by Players",
+                                    '<br>',
+                                    '<sup>',
+                                    "Colored lines represent scoring trends by Jonquel Jones, Alyssa Thomas, Chelsea Gray & A'ja Wilson",
+                                    '</sup>')))
+```
+
+## Save Figure as PDF
+
+```{r}
+pdf("WNBA_playoffs.pdf", heigh=6, width=8)
+print(p_playoffs_plotly)
+dev.off()
+```
+
+## Display Dynamic Figure in HTML:
+
+```{r}
+p_playoffs_plotly
+```
+
+**Note:** Jonquel Jones and Alyssa Thomas were Connecticut's top two scorers by points per game over the course of the playoffs. Chelsea Gray and A'ja Wilson were Las Vegas' top two scorers by points per game over the course of the playoffs.

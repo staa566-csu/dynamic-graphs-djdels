@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Delsie Johnson">
+
+<title>STAA 566 Dynamic Figure</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="index_files/libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="index_files/libs/plotly-binding-4.10.0/plotly.js"></script>
+<script src="index_files/libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="index_files/libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="index_files/libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+<script src="index_files/libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="index_files/libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="index_files/libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">STAA 566 Dynamic Figure</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Delsie Johnson </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="wnba-playoffs-dynamic-figure" class="level1">
+<h1>2022 WNBA Playoffs: Dynamic Figure</h1>
+<p><strong>Data source:</strong> “WNBA_playoffs.csv” from https://stats.wnba.com/players/boxscores-traditional/. csv file included</p>
+<p><strong>What I want to convey:</strong> I want to convey the points in each playoff game for each player of the two WNBA teams who made it to the championship. I want to show how each player varied in points per game and also how each team varied compared to the other team. I want this graph to give insight into how players points in a game changed during the playoffs and if it had any influence on which team won overall. Note: the Las Vegas Aces won the 2022 WNBA championship over the Connecticut Sun.</p>
+<p><strong>Functionality/formatting:</strong> I allow the user to hover over the points in the graph. I do this so they can see more information including the team, player, points, and game date. The user can also hide/show each team. This allows them to only look at the scoring data for one team at a time, which makes the graph less crowded and easier to see if that is what the user wants.</p>
+<section id="r-code" class="level2">
+<h2 class="anchored" data-anchor-id="r-code">R Code:</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load libraries</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmlwidgets)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># read in data from stats.wnba.com</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>WNBA <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"WNBA_playoffs.csv"</span>, <span class="at">header=</span>T)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>WNBA<span class="sc">$</span>game_date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(WNBA<span class="sc">$</span>game_date, <span class="at">format=</span><span class="st">"%m/%d/%y"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># renaming variables for formatting</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>WNBA<span class="sc">$</span>Points <span class="ot">&lt;-</span> WNBA<span class="sc">$</span>pts</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>WNBA<span class="sc">$</span>Game.Date <span class="ot">&lt;-</span> WNBA<span class="sc">$</span>game_date</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>WNBA<span class="sc">$</span>Player <span class="ot">&lt;-</span> WNBA<span class="sc">$</span>player</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>WNBA<span class="sc">$</span>Team <span class="ot">&lt;-</span> WNBA<span class="sc">$</span>team</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># create ggplot</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>p_playoffs <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>WNBA, <span class="fu">aes</span>(<span class="at">x=</span>Game.Date, <span class="at">y=</span>Points, <span class="at">col=</span>Team)) <span class="sc">+</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="do">### plotting Conneticut data</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>WNBA <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Team<span class="sc">==</span><span class="st">"CON"</span>), </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>             <span class="fu">aes</span>(<span class="at">group=</span>Player), </span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>             <span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">w =</span> <span class="fl">0.2</span>, <span class="at">h =</span> <span class="dv">0</span>), </span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha=</span><span class="fl">0.6</span>)<span class="sc">+</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="co"># connecting lines of top 2 scorers for Conneticut</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>WNBA <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Player<span class="sc">==</span><span class="st">"JONQUEL JONES"</span>),</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>            <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>WNBA <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Player<span class="sc">==</span><span class="st">"ALYSSA THOMAS"</span>),</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>            <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="do">### plotting Las Vegas data</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data=</span>WNBA <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Team<span class="sc">==</span><span class="st">"LVA"</span>),</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>             <span class="fu">aes</span>(<span class="at">group=</span>Player), </span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>             <span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">w =</span> <span class="fl">0.2</span>, <span class="at">h =</span> <span class="dv">0</span>),</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha=</span><span class="fl">0.6</span>)<span class="sc">+</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  <span class="co"># connecting lines of top 2 scorers for Las Vegas</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>WNBA <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Player<span class="sc">==</span><span class="st">"CHELSEA GRAY"</span>),</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>            <span class="at">linetype=</span><span class="st">"dashed"</span>)<span class="sc">+</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>WNBA <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Player<span class="sc">==</span><span class="st">"A'JA WILSON"</span>), </span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>            <span class="at">linetype=</span><span class="st">"dotted"</span>)<span class="sc">+</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">""</span>,</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>       <span class="at">y=</span><span class="st">"Points"</span>, </span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>       <span class="at">title=</span><span class="st">"2022 WNBA Playoffs: Las Vegas &amp; Conneticut Points by Players"</span>)<span class="sc">+</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()<span class="sc">+</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.major.y =</span> <span class="fu">element_line</span>(<span class="at">linetype =</span> <span class="dv">3</span>, <span class="at">color=</span><span class="st">"grey80"</span>))</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="co"># make ggplot dynamic with plotly</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>p_playoffs_plotly <span class="ot">&lt;-</span> <span class="fu">ggplotly</span>(p_playoffs)</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>p_playoffs_plotly <span class="ot">&lt;-</span> p_playoffs_plotly <span class="sc">%&gt;%</span> <span class="co"># adding subtitle using HTML to format text</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layout</span>(<span class="at">title =</span> <span class="fu">list</span>(<span class="at">text =</span> <span class="fu">paste0</span>(<span class="st">"2022 WNBA Playoffs: Las Vegas &amp; Conneticut Points by Players"</span>,</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">'&lt;br&gt;'</span>,</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">'&lt;sup&gt;'</span>,</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">"Colored lines represent scoring trends by Jonquel Jones, Alyssa Thomas, Chelsea Gray &amp; A'ja Wilson"</span>,</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>                                    <span class="st">'&lt;/sup&gt;'</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="save-figure-as-pdf" class="level2">
+<h2 class="anchored" data-anchor-id="save-figure-as-pdf">Save Figure as PDF</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="st">"WNBA_playoffs.pdf"</span>, <span class="at">heigh=</span><span class="dv">6</span>, <span class="at">width=</span><span class="dv">8</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(p_playoffs_plotly)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>quartz_off_screen 
+                2 </code></pre>
+</div>
+</div>
+</section>
+<section id="display-dynamic-figure-in-html" class="level2">
+<h2 class="anchored" data-anchor-id="display-dynamic-figure-in-html">Display Dynamic Figure in HTML:</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>p_playoffs_plotly</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="htmlwidget-57de4b466b1ac47f38e2" style="width:100%;height:464px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-57de4b466b1ac47f38e2">{"x":{"data":[{"x":[19252.8640146378,19252.8768266192,19252.8512908632,19253.1207800696,19253.0090198779,19253.0970911133,19253.1318259949,19253.0095519805,19249.8766806349,19249.9053628122,19249.834750573,19250.116422918,19249.9224898973,19249.8334935167,19250.0858110471,19250.096879874,19249.9916190179,19249.9676229415,19247.8850413684,19248.0787790821,19248.1140443051,19247.8893061963,19247.8438194226,19247.9774086032,19248.1543855423,19247.8508850844,19248.164685349,19247.9289198585,19246.0455185162,19245.8473962595,19245.8550638431,19246.1847380446,19246.1137400107,19245.864883083,19246.1554569396,19246.1863980541,19243.1710305686,19242.8211834388,19242.9103724275,19243.13316587,19242.8847265896,19243.1604937412,19242.8751607561,19243.0374115674,19240.8441806543,19241.1753157808,19241.1154486988,19240.968372145,19240.9020153567,19240.839845402,19240.8621266951,19241.1137137082,19240.8661643704,19241.1074105233,19238.9859800479,19238.8300618332,19238.9997905218,19238.9548300277,19238.9510423454,19238.8082330698,19238.9911180568,19238.8355962588,19234.8445309468,19235.1021309449,19235.0547430065,19235.0101162206,19235.0797230548,19234.8395238847,19234.8155727656,19235.1148303579,19235.1471709296,19234.9536127007,19232.0570288484,19232.1220944388,19232.0898950783,19232.1011091127,19232.1588876971,19231.9611892454,19231.9848339354,19231.8673365531,19228.1906267464,19227.8833706649,19228.0948321184,19227.83412791,19227.8879367927,19227.8710229548,19228.0662842494,19227.8402849915,19227.8513156099,19227.9615291378,19225.1776647645,19225.051358466,19224.893413972,19225.0359186825,19225.1022851969,19224.841217405,19225.013114244,19225.0513829407,19224.8331275648,19224.9960564317,19221.8048346112,19222.1187541784,19222.1730517278,19222.1100942944,19222.1027062153,19222.0037950932,19222.0395470372,19222.066211571,19221.8504171274,19221.9630562879],"y":[11,1,0,11,6,12,13,17,2,4,0,16,8,12,11,20,14,18,3,4,3,0,0,16,12,18,13,2,0,0,5,12,3,10,15,19,0,2,2,14,12,12,15,15,19,17,19,12,9,11,3,2,2,10,18,6,12,6,14,12,4,0,23,7,14,7,2,2,2,6,7,7,12,15,2,4,5,6,12,12,2,4,0,0,21,3,11,8,11,13,20,13,6,9,5,4,2,0,0,20,13,12,10,8,8,6,2,0,15,19],"text":["Game.Date: 2022-09-18<br />Points: 11<br />Team: CON<br />Player: ALYSSA THOMAS","Game.Date: 2022-09-18<br />Points:  1<br />Team: CON<br />Player: ODYSSEY SIMS","Game.Date: 2022-09-18<br />Points:  0<br />Team: CON<br />Player: DIJONAI CARRINGTON","Game.Date: 2022-09-18<br />Points: 11<br />Team: CON<br />Player: BRIONNA JONES","Game.Date: 2022-09-18<br />Points:  6<br />Team: CON<br />Player: NATISHA HIEDEMAN","Game.Date: 2022-09-18<br />Points: 12<br />Team: CON<br />Player: DEWANNA BONNER","Game.Date: 2022-09-18<br />Points: 13<br />Team: CON<br />Player: JONQUEL JONES","Game.Date: 2022-09-18<br />Points: 17<br />Team: CON<br />Player: COURTNEY WILLIAMS","Game.Date: 2022-09-15<br />Points:  2<br />Team: CON<br />Player: JOYNER HOLMES","Game.Date: 2022-09-15<br />Points:  4<br />Team: CON<br />Player: ODYSSEY SIMS","Game.Date: 2022-09-15<br />Points:  0<br />Team: CON<br />Player: NIA CLOUDEN","Game.Date: 2022-09-15<br />Points: 16<br />Team: CON<br />Player: ALYSSA THOMAS","Game.Date: 2022-09-15<br />Points:  8<br />Team: CON<br />Player: BRIONNA JONES","Game.Date: 2022-09-15<br />Points: 12<br />Team: CON<br />Player: DIJONAI CARRINGTON","Game.Date: 2022-09-15<br />Points: 11<br />Team: CON<br />Player: COURTNEY WILLIAMS","Game.Date: 2022-09-15<br />Points: 20<br />Team: CON<br />Player: JONQUEL JONES","Game.Date: 2022-09-15<br />Points: 14<br />Team: CON<br />Player: NATISHA HIEDEMAN","Game.Date: 2022-09-15<br />Points: 18<br />Team: CON<br />Player: DEWANNA BONNER","Game.Date: 2022-09-13<br />Points:  3<br />Team: CON<br />Player: ODYSSEY SIMS","Game.Date: 2022-09-13<br />Points:  4<br />Team: CON<br />Player: NIA CLOUDEN","Game.Date: 2022-09-13<br />Points:  3<br />Team: CON<br />Player: DIJONAI CARRINGTON","Game.Date: 2022-09-13<br />Points:  0<br />Team: CON<br />Player: NATISHA HIEDEMAN","Game.Date: 2022-09-13<br />Points:  0<br />Team: CON<br />Player: JOYNER HOLMES","Game.Date: 2022-09-13<br />Points: 16<br />Team: CON<br />Player: JONQUEL JONES","Game.Date: 2022-09-13<br />Points: 12<br />Team: CON<br />Player: BRIONNA JONES","Game.Date: 2022-09-13<br />Points: 18<br />Team: CON<br />Player: COURTNEY WILLIAMS","Game.Date: 2022-09-13<br />Points: 13<br />Team: CON<br />Player: ALYSSA THOMAS","Game.Date: 2022-09-13<br />Points:  2<br />Team: CON<br />Player: DEWANNA BONNER","Game.Date: 2022-09-11<br />Points:  0<br />Team: CON<br />Player: ODYSSEY SIMS","Game.Date: 2022-09-11<br />Points:  0<br />Team: CON<br />Player: DIJONAI CARRINGTON","Game.Date: 2022-09-11<br />Points:  5<br />Team: CON<br />Player: COURTNEY WILLIAMS","Game.Date: 2022-09-11<br />Points: 12<br />Team: CON<br />Player: BRIONNA JONES","Game.Date: 2022-09-11<br />Points:  3<br />Team: CON<br />Player: DEWANNA BONNER","Game.Date: 2022-09-11<br />Points: 10<br />Team: CON<br />Player: NATISHA HIEDEMAN","Game.Date: 2022-09-11<br />Points: 15<br />Team: CON<br />Player: JONQUEL JONES","Game.Date: 2022-09-11<br />Points: 19<br />Team: CON<br />Player: ALYSSA THOMAS","Game.Date: 2022-09-08<br />Points:  0<br />Team: CON<br />Player: ODYSSEY SIMS","Game.Date: 2022-09-08<br />Points:  2<br />Team: CON<br />Player: DIJONAI CARRINGTON","Game.Date: 2022-09-08<br />Points:  2<br />Team: CON<br />Player: BRIONNA JONES","Game.Date: 2022-09-08<br />Points: 14<br />Team: CON<br />Player: NATISHA HIEDEMAN","Game.Date: 2022-09-08<br />Points: 12<br />Team: CON<br />Player: COURTNEY WILLIAMS","Game.Date: 2022-09-08<br />Points: 12<br />Team: CON<br />Player: ALYSSA THOMAS","Game.Date: 2022-09-08<br />Points: 15<br />Team: CON<br />Player: DEWANNA BONNER","Game.Date: 2022-09-08<br />Points: 15<br />Team: CON<br />Player: JONQUEL JONES","Game.Date: 2022-09-06<br />Points: 19<br />Team: CON<br />Player: DEWANNA BONNER","Game.Date: 2022-09-06<br />Points: 17<br />Team: CON<br />Player: ALYSSA THOMAS","Game.Date: 2022-09-06<br />Points: 19<br />Team: CON<br />Player: COURTNEY WILLIAMS","Game.Date: 2022-09-06<br />Points: 12<br />Team: CON<br />Player: DIJONAI CARRINGTON","Game.Date: 2022-09-06<br />Points:  9<br />Team: CON<br />Player: JONQUEL JONES","Game.Date: 2022-09-06<br />Points: 11<br />Team: CON<br />Player: BRIONNA JONES","Game.Date: 2022-09-06<br />Points:  3<br />Team: CON<br />Player: NIA CLOUDEN","Game.Date: 2022-09-06<br />Points:  2<br />Team: CON<br />Player: JOYNER HOLMES","Game.Date: 2022-09-06<br />Points:  2<br />Team: CON<br />Player: NATISHA HIEDEMAN","Game.Date: 2022-09-06<br />Points: 10<br />Team: CON<br />Player: ODYSSEY SIMS","Game.Date: 2022-09-04<br />Points: 18<br />Team: CON<br />Player: DEWANNA BONNER","Game.Date: 2022-09-04<br />Points:  6<br />Team: CON<br />Player: ALYSSA THOMAS","Game.Date: 2022-09-04<br />Points: 12<br />Team: CON<br />Player: BRIONNA JONES","Game.Date: 2022-09-04<br />Points:  6<br />Team: CON<br />Player: JONQUEL JONES","Game.Date: 2022-09-04<br />Points: 14<br />Team: CON<br />Player: NATISHA HIEDEMAN","Game.Date: 2022-09-04<br />Points: 12<br />Team: CON<br />Player: COURTNEY WILLIAMS","Game.Date: 2022-09-04<br />Points:  4<br />Team: CON<br />Player: DIJONAI CARRINGTON","Game.Date: 2022-09-04<br />Points:  0<br />Team: CON<br />Player: ODYSSEY SIMS","Game.Date: 2022-08-31<br />Points: 23<br />Team: CON<br />Player: JONQUEL JONES","Game.Date: 2022-08-31<br />Points:  7<br />Team: CON<br />Player: ALYSSA THOMAS","Game.Date: 2022-08-31<br />Points: 14<br />Team: CON<br />Player: NATISHA HIEDEMAN","Game.Date: 2022-08-31<br />Points:  7<br />Team: CON<br />Player: BRIONNA JONES","Game.Date: 2022-08-31<br />Points:  2<br />Team: CON<br />Player: NIA CLOUDEN","Game.Date: 2022-08-31<br />Points:  2<br />Team: CON<br />Player: JOYNER HOLMES","Game.Date: 2022-08-31<br />Points:  2<br />Team: CON<br />Player: DEWANNA BONNER","Game.Date: 2022-08-31<br />Points:  6<br />Team: CON<br />Player: COURTNEY WILLIAMS","Game.Date: 2022-08-31<br />Points:  7<br />Team: CON<br />Player: DIJONAI CARRINGTON","Game.Date: 2022-08-31<br />Points:  7<br />Team: CON<br />Player: ODYSSEY SIMS","Game.Date: 2022-08-28<br />Points: 12<br />Team: CON<br />Player: ALYSSA THOMAS","Game.Date: 2022-08-28<br />Points: 15<br />Team: CON<br />Player: DEWANNA BONNER","Game.Date: 2022-08-28<br />Points:  2<br />Team: CON<br />Player: DIJONAI CARRINGTON","Game.Date: 2022-08-28<br />Points:  4<br />Team: CON<br />Player: ODYSSEY SIMS","Game.Date: 2022-08-28<br />Points:  5<br />Team: CON<br />Player: NATISHA HIEDEMAN","Game.Date: 2022-08-28<br />Points:  6<br />Team: CON<br />Player: COURTNEY WILLIAMS","Game.Date: 2022-08-28<br />Points: 12<br />Team: CON<br />Player: BRIONNA JONES","Game.Date: 2022-08-28<br />Points: 12<br />Team: CON<br />Player: JONQUEL JONES","Game.Date: 2022-08-24<br />Points:  2<br />Team: CON<br />Player: COURTNEY WILLIAMS","Game.Date: 2022-08-24<br />Points:  4<br />Team: CON<br />Player: ODYSSEY SIMS","Game.Date: 2022-08-24<br />Points:  0<br />Team: CON<br />Player: NIA CLOUDEN","Game.Date: 2022-08-24<br />Points:  0<br />Team: CON<br />Player: JOYNER HOLMES","Game.Date: 2022-08-24<br />Points: 21<br />Team: CON<br />Player: DEWANNA BONNER","Game.Date: 2022-08-24<br />Points:  3<br />Team: CON<br />Player: DIJONAI CARRINGTON","Game.Date: 2022-08-24<br />Points: 11<br />Team: CON<br />Player: NATISHA HIEDEMAN","Game.Date: 2022-08-24<br />Points:  8<br />Team: CON<br />Player: BRIONNA JONES","Game.Date: 2022-08-24<br />Points: 11<br />Team: CON<br />Player: JONQUEL JONES","Game.Date: 2022-08-24<br />Points: 13<br />Team: CON<br />Player: ALYSSA THOMAS","Game.Date: 2022-08-21<br />Points: 20<br />Team: CON<br />Player: BRIONNA JONES","Game.Date: 2022-08-21<br />Points: 13<br />Team: CON<br />Player: DIJONAI CARRINGTON","Game.Date: 2022-08-21<br />Points:  6<br />Team: CON<br />Player: ALYSSA THOMAS","Game.Date: 2022-08-21<br />Points:  9<br />Team: CON<br />Player: DEWANNA BONNER","Game.Date: 2022-08-21<br />Points:  5<br />Team: CON<br />Player: COURTNEY WILLIAMS","Game.Date: 2022-08-21<br />Points:  4<br />Team: CON<br />Player: ODYSSEY SIMS","Game.Date: 2022-08-21<br />Points:  2<br />Team: CON<br />Player: NIA CLOUDEN","Game.Date: 2022-08-21<br />Points:  0<br />Team: CON<br />Player: NATISHA HIEDEMAN","Game.Date: 2022-08-21<br />Points:  0<br />Team: CON<br />Player: JOYNER HOLMES","Game.Date: 2022-08-21<br />Points: 20<br />Team: CON<br />Player: JONQUEL JONES","Game.Date: 2022-08-18<br />Points: 13<br />Team: CON<br />Player: DIJONAI CARRINGTON","Game.Date: 2022-08-18<br />Points: 12<br />Team: CON<br />Player: DEWANNA BONNER","Game.Date: 2022-08-18<br />Points: 10<br />Team: CON<br />Player: COURTNEY WILLIAMS","Game.Date: 2022-08-18<br />Points:  8<br />Team: CON<br />Player: NATISHA HIEDEMAN","Game.Date: 2022-08-18<br />Points:  8<br />Team: CON<br />Player: BRIONNA JONES","Game.Date: 2022-08-18<br />Points:  6<br />Team: CON<br />Player: ODYSSEY SIMS","Game.Date: 2022-08-18<br />Points:  2<br />Team: CON<br />Player: NIA CLOUDEN","Game.Date: 2022-08-18<br />Points:  0<br />Team: CON<br />Player: JOYNER HOLMES","Game.Date: 2022-08-18<br />Points: 15<br />Team: CON<br />Player: ALYSSA THOMAS","Game.Date: 2022-08-18<br />Points: 19<br />Team: CON<br />Player: JONQUEL JONES"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":0.6,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"hoveron":"points","name":"CON","legendgroup":"CON","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[19222,19225,19228,19232,19235,19239,19241,19243,19246,19248,19250,19253],"y":[19,20,11,12,23,6,9,15,15,16,20,13],"text":["Game.Date: 2022-08-18<br />Points: 19<br />Team: CON","Game.Date: 2022-08-21<br />Points: 20<br />Team: CON","Game.Date: 2022-08-24<br />Points: 11<br />Team: CON","Game.Date: 2022-08-28<br />Points: 12<br />Team: CON","Game.Date: 2022-08-31<br />Points: 23<br />Team: CON","Game.Date: 2022-09-04<br />Points:  6<br />Team: CON","Game.Date: 2022-09-06<br />Points:  9<br />Team: CON","Game.Date: 2022-09-08<br />Points: 15<br />Team: CON","Game.Date: 2022-09-11<br />Points: 15<br />Team: CON","Game.Date: 2022-09-13<br />Points: 16<br />Team: CON","Game.Date: 2022-09-15<br />Points: 20<br />Team: CON","Game.Date: 2022-09-18<br />Points: 13<br />Team: CON"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)","dash":"dash"},"hoveron":"points","name":"CON","legendgroup":"CON","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[19222,19225,19228,19232,19235,19239,19241,19243,19246,19248,19250,19253],"y":[15,6,13,12,7,6,17,12,19,13,16,11],"text":["Game.Date: 2022-08-18<br />Points: 15<br />Team: CON","Game.Date: 2022-08-21<br />Points:  6<br />Team: CON","Game.Date: 2022-08-24<br />Points: 13<br />Team: CON","Game.Date: 2022-08-28<br />Points: 12<br />Team: CON","Game.Date: 2022-08-31<br />Points:  7<br />Team: CON","Game.Date: 2022-09-04<br />Points:  6<br />Team: CON","Game.Date: 2022-09-06<br />Points: 17<br />Team: CON","Game.Date: 2022-09-08<br />Points: 12<br />Team: CON","Game.Date: 2022-09-11<br />Points: 19<br />Team: CON","Game.Date: 2022-09-13<br />Points: 13<br />Team: CON","Game.Date: 2022-09-15<br />Points: 16<br />Team: CON","Game.Date: 2022-09-18<br />Points: 11<br />Team: CON"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)","dash":"dot"},"hoveron":"points","name":"CON","legendgroup":"CON","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[19252.9117728595,19252.8822274599,19253.1077967673,19253.0465191181,19253.1619835197,19253.1620632892,19252.9808233204,19249.8123951307,19250.0350840794,19249.9633905605,19250.0027556047,19250.0851395074,19249.8969221277,19250.1555530326,19249.9192210371,19250.1531381069,19250.1573590153,19249.8166185133,19250.1473125716,19247.8578138637,19248.1722295498,19248.1677350133,19247.9445020918,19248.1965720607,19248.0506470692,19248.0011401418,19248.1091002099,19247.9895292602,19248.0425580517,19247.8284554359,19247.8586166027,19246.1760600658,19246.1011894048,19246.0986440138,19246.0769763774,19246.0690457008,19245.8625895199,19245.8338986725,19246.0976094877,19241.1557336874,19240.8143372911,19240.9778542148,19241.0997059394,19241.1645276674,19240.9961036436,19240.8757179541,19238.9762086392,19239.060347882,19239.0751673112,19239.0620569112,19239.0958546482,19239.0317678292,19238.8039659956,19234.9502849843,19235.0175134382,19234.930169706,19235.1204146608,19234.9777891186,19234.9850129828,19235.0613436778,19231.9662530203,19232.1079254134,19231.9165088516,19231.9912902753,19232.1592171622,19232.1664119821,19231.9358391957,19223.9962717689,19223.8748717566,19224.071399318,19223.8940692184,19224.0061439105,19224.0050623628,19224.1003012557,19223.9696149792,19223.8955890283,19223.8791229073,19223.8436928327,19220.9358842526,19220.8749382479,19220.8704388929,19220.8364968546,19220.8466117189,19220.8503124481,19221.1670878549,19220.8632287539,19220.9667475206,19220.9663012614,19220.8257624164],"y":[0,2,17,15,13,11,20,0,3,2,0,0,0,0,2,11,17,22,19,3,0,0,0,0,21,26,20,5,3,2,5,24,0,3,2,0,6,11,21,15,18,23,31,6,4,0,34,16,9,14,8,0,29,19,18,6,2,0,0,33,3,6,4,11,20,8,21,11,11,15,17,22,6,5,0,3,0,27,8,16,6,2,0,0,0,0,22,17,8],"text":["Game.Date: 2022-09-18<br />Points:  0<br />Team: LVA<br />Player: DEARICA HAMBY","Game.Date: 2022-09-18<br />Points:  2<br />Team: LVA<br />Player: KIAH STOKES","Game.Date: 2022-09-18<br />Points: 17<br />Team: LVA<br />Player: RIQUNA WILLIAMS","Game.Date: 2022-09-18<br />Points: 15<br />Team: LVA<br />Player: KELSEY PLUM","Game.Date: 2022-09-18<br />Points: 13<br />Team: LVA<br />Player: JACKIE YOUNG","Game.Date: 2022-09-18<br />Points: 11<br />Team: LVA<br />Player: A'JA WILSON","Game.Date: 2022-09-18<br />Points: 20<br />Team: LVA<br />Player: CHELSEA GRAY","Game.Date: 2022-09-15<br />Points:  0<br />Team: LVA<br />Player: THERESA PLAISANCE","Game.Date: 2022-09-15<br />Points:  3<br />Team: LVA<br />Player: RIQUNA WILLIAMS","Game.Date: 2022-09-15<br />Points:  2<br />Team: LVA<br />Player: DEARICA HAMBY","Game.Date: 2022-09-15<br />Points:  0<br />Team: LVA<br />Player: ILIANA RUPERT","Game.Date: 2022-09-15<br />Points:  0<br />Team: LVA<br />Player: SYDNEY COLSON","Game.Date: 2022-09-15<br />Points:  0<br />Team: LVA<br />Player: KIERSTAN BELL","Game.Date: 2022-09-15<br />Points:  0<br />Team: LVA<br />Player: AISHA SHEPPARD","Game.Date: 2022-09-15<br />Points:  2<br />Team: LVA<br />Player: KIAH STOKES","Game.Date: 2022-09-15<br />Points: 11<br />Team: LVA<br />Player: CHELSEA GRAY","Game.Date: 2022-09-15<br />Points: 17<br />Team: LVA<br />Player: KELSEY PLUM","Game.Date: 2022-09-15<br />Points: 22<br />Team: LVA<br />Player: JACKIE YOUNG","Game.Date: 2022-09-15<br />Points: 19<br />Team: LVA<br />Player: A'JA WILSON","Game.Date: 2022-09-13<br />Points:  3<br />Team: LVA<br />Player: ILIANA RUPERT","Game.Date: 2022-09-13<br />Points:  0<br />Team: LVA<br />Player: THERESA PLAISANCE","Game.Date: 2022-09-13<br />Points:  0<br />Team: LVA<br />Player: AISHA SHEPPARD","Game.Date: 2022-09-13<br />Points:  0<br />Team: LVA<br />Player: KIERSTAN BELL","Game.Date: 2022-09-13<br />Points:  0<br />Team: LVA<br />Player: SYDNEY COLSON","Game.Date: 2022-09-13<br />Points: 21<br />Team: LVA<br />Player: CHELSEA GRAY","Game.Date: 2022-09-13<br />Points: 26<br />Team: LVA<br />Player: A'JA WILSON","Game.Date: 2022-09-13<br />Points: 20<br />Team: LVA<br />Player: KELSEY PLUM","Game.Date: 2022-09-13<br />Points:  5<br />Team: LVA<br />Player: JACKIE YOUNG","Game.Date: 2022-09-13<br />Points:  3<br />Team: LVA<br />Player: DEARICA HAMBY","Game.Date: 2022-09-13<br />Points:  2<br />Team: LVA<br />Player: KIAH STOKES","Game.Date: 2022-09-13<br />Points:  5<br />Team: LVA<br />Player: RIQUNA WILLIAMS","Game.Date: 2022-09-11<br />Points: 24<br />Team: LVA<br />Player: A'JA WILSON","Game.Date: 2022-09-11<br />Points:  0<br />Team: LVA<br />Player: ILIANA RUPERT","Game.Date: 2022-09-11<br />Points:  3<br />Team: LVA<br />Player: RIQUNA WILLIAMS","Game.Date: 2022-09-11<br />Points:  2<br />Team: LVA<br />Player: DEARICA HAMBY","Game.Date: 2022-09-11<br />Points:  0<br />Team: LVA<br />Player: KIAH STOKES","Game.Date: 2022-09-11<br />Points:  6<br />Team: LVA<br />Player: KELSEY PLUM","Game.Date: 2022-09-11<br />Points: 11<br />Team: LVA<br />Player: JACKIE YOUNG","Game.Date: 2022-09-11<br />Points: 21<br />Team: LVA<br />Player: CHELSEA GRAY","Game.Date: 2022-09-06<br />Points: 15<br />Team: LVA<br />Player: KELSEY PLUM","Game.Date: 2022-09-06<br />Points: 18<br />Team: LVA<br />Player: JACKIE YOUNG","Game.Date: 2022-09-06<br />Points: 23<br />Team: LVA<br />Player: A'JA WILSON","Game.Date: 2022-09-06<br />Points: 31<br />Team: LVA<br />Player: CHELSEA GRAY","Game.Date: 2022-09-06<br />Points:  6<br />Team: LVA<br />Player: RIQUNA WILLIAMS","Game.Date: 2022-09-06<br />Points:  4<br />Team: LVA<br />Player: KIAH STOKES","Game.Date: 2022-09-06<br />Points:  0<br />Team: LVA<br />Player: DEARICA HAMBY","Game.Date: 2022-09-04<br />Points: 34<br />Team: LVA<br />Player: A'JA WILSON","Game.Date: 2022-09-04<br />Points: 16<br />Team: LVA<br />Player: KELSEY PLUM","Game.Date: 2022-09-04<br />Points:  9<br />Team: LVA<br />Player: KIAH STOKES","Game.Date: 2022-09-04<br />Points: 14<br />Team: LVA<br />Player: RIQUNA WILLIAMS","Game.Date: 2022-09-04<br />Points:  8<br />Team: LVA<br />Player: JACKIE YOUNG","Game.Date: 2022-09-04<br />Points:  0<br />Team: LVA<br />Player: DEARICA HAMBY","Game.Date: 2022-09-04<br />Points: 29<br />Team: LVA<br />Player: CHELSEA GRAY","Game.Date: 2022-08-31<br />Points: 19<br />Team: LVA<br />Player: CHELSEA GRAY","Game.Date: 2022-08-31<br />Points: 18<br />Team: LVA<br />Player: KELSEY PLUM","Game.Date: 2022-08-31<br />Points:  6<br />Team: LVA<br />Player: JACKIE YOUNG","Game.Date: 2022-08-31<br />Points:  2<br />Team: LVA<br />Player: RIQUNA WILLIAMS","Game.Date: 2022-08-31<br />Points:  0<br />Team: LVA<br />Player: KIAH STOKES","Game.Date: 2022-08-31<br />Points:  0<br />Team: LVA<br />Player: ILIANA RUPERT","Game.Date: 2022-08-31<br />Points: 33<br />Team: LVA<br />Player: A'JA WILSON","Game.Date: 2022-08-28<br />Points:  3<br />Team: LVA<br />Player: ILIANA RUPERT","Game.Date: 2022-08-28<br />Points:  6<br />Team: LVA<br />Player: RIQUNA WILLIAMS","Game.Date: 2022-08-28<br />Points:  4<br />Team: LVA<br />Player: KIAH STOKES","Game.Date: 2022-08-28<br />Points: 11<br />Team: LVA<br />Player: JACKIE YOUNG","Game.Date: 2022-08-28<br />Points: 20<br />Team: LVA<br />Player: KELSEY PLUM","Game.Date: 2022-08-28<br />Points:  8<br />Team: LVA<br />Player: A'JA WILSON","Game.Date: 2022-08-28<br />Points: 21<br />Team: LVA<br />Player: CHELSEA GRAY","Game.Date: 2022-08-20<br />Points: 11<br />Team: LVA<br />Player: KIERSTAN BELL","Game.Date: 2022-08-20<br />Points: 11<br />Team: LVA<br />Player: RIQUNA WILLIAMS","Game.Date: 2022-08-20<br />Points: 15<br />Team: LVA<br />Player: JACKIE YOUNG","Game.Date: 2022-08-20<br />Points: 17<br />Team: LVA<br />Player: A'JA WILSON","Game.Date: 2022-08-20<br />Points: 22<br />Team: LVA<br />Player: KELSEY PLUM","Game.Date: 2022-08-20<br />Points:  6<br />Team: LVA<br />Player: KIAH STOKES","Game.Date: 2022-08-20<br />Points:  5<br />Team: LVA<br />Player: THERESA PLAISANCE","Game.Date: 2022-08-20<br />Points:  0<br />Team: LVA<br />Player: SYDNEY COLSON","Game.Date: 2022-08-20<br />Points:  3<br />Team: LVA<br />Player: ILIANA RUPERT","Game.Date: 2022-08-20<br />Points:  0<br />Team: LVA<br />Player: AISHA SHEPPARD","Game.Date: 2022-08-20<br />Points: 27<br />Team: LVA<br />Player: CHELSEA GRAY","Game.Date: 2022-08-17<br />Points:  8<br />Team: LVA<br />Player: A'JA WILSON","Game.Date: 2022-08-17<br />Points: 16<br />Team: LVA<br />Player: JACKIE YOUNG","Game.Date: 2022-08-17<br />Points:  6<br />Team: LVA<br />Player: ILIANA RUPERT","Game.Date: 2022-08-17<br />Points:  2<br />Team: LVA<br />Player: RIQUNA WILLIAMS","Game.Date: 2022-08-17<br />Points:  0<br />Team: LVA<br />Player: KIERSTAN BELL","Game.Date: 2022-08-17<br />Points:  0<br />Team: LVA<br />Player: SYDNEY COLSON","Game.Date: 2022-08-17<br />Points:  0<br />Team: LVA<br />Player: THERESA PLAISANCE","Game.Date: 2022-08-17<br />Points:  0<br />Team: LVA<br />Player: AISHA SHEPPARD","Game.Date: 2022-08-17<br />Points: 22<br />Team: LVA<br />Player: KELSEY PLUM","Game.Date: 2022-08-17<br />Points: 17<br />Team: LVA<br />Player: CHELSEA GRAY","Game.Date: 2022-08-17<br />Points:  8<br />Team: LVA<br />Player: KIAH STOKES"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,191,196,1)","opacity":0.6,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)"}},"hoveron":"points","name":"LVA","legendgroup":"LVA","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[19221,19224,19232,19235,19239,19241,19246,19248,19250,19253],"y":[17,27,21,19,29,31,21,21,11,20],"text":["Game.Date: 2022-08-17<br />Points: 17<br />Team: LVA","Game.Date: 2022-08-20<br />Points: 27<br />Team: LVA","Game.Date: 2022-08-28<br />Points: 21<br />Team: LVA","Game.Date: 2022-08-31<br />Points: 19<br />Team: LVA","Game.Date: 2022-09-04<br />Points: 29<br />Team: LVA","Game.Date: 2022-09-06<br />Points: 31<br />Team: LVA","Game.Date: 2022-09-11<br />Points: 21<br />Team: LVA","Game.Date: 2022-09-13<br />Points: 21<br />Team: LVA","Game.Date: 2022-09-15<br />Points: 11<br />Team: LVA","Game.Date: 2022-09-18<br />Points: 20<br />Team: LVA"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)","dash":"dash"},"hoveron":"points","name":"LVA","legendgroup":"LVA","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[19221,19224,19232,19235,19239,19241,19246,19248,19250,19253],"y":[8,17,8,33,34,23,24,26,19,11],"text":["Game.Date: 2022-08-17<br />Points:  8<br />Team: LVA","Game.Date: 2022-08-20<br />Points: 17<br />Team: LVA","Game.Date: 2022-08-28<br />Points:  8<br />Team: LVA","Game.Date: 2022-08-31<br />Points: 33<br />Team: LVA","Game.Date: 2022-09-04<br />Points: 34<br />Team: LVA","Game.Date: 2022-09-06<br />Points: 23<br />Team: LVA","Game.Date: 2022-09-11<br />Points: 24<br />Team: LVA","Game.Date: 2022-09-13<br />Points: 26<br />Team: LVA","Game.Date: 2022-09-15<br />Points: 19<br />Team: LVA","Game.Date: 2022-09-18<br />Points: 11<br />Team: LVA"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)","dash":"dot"},"hoveron":"points","name":"LVA","legendgroup":"LVA","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":25.5707762557078,"l":37.2602739726027},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"2022 WNBA Playoffs: Las Vegas & Conneticut Points by Players<br><sup>Colored lines represent scoring trends by Jonquel Jones, Alyssa Thomas, Chelsea Gray & A'ja Wilson<\/sup>","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[19219.2089473728,19254.7788783329],"tickmode":"array","ticktext":["Aug 22","Aug 29","Sep 05","Sep 12","Sep 19"],"tickvals":[19226,19233,19240,19247,19254],"categoryorder":"array","categoryarray":["Aug 22","Aug 29","Sep 05","Sep 12","Sep 19"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-1.7,35.7],"tickmode":"array","ticktext":["0","10","20","30"],"tickvals":[2.22044604925031e-16,10,20,30],"categoryorder":"array","categoryarray":["0","10","20","30"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":true,"linecolor":"rgba(0,0,0,1)","linewidth":0.66417600664176,"showgrid":true,"gridcolor":"rgba(204,204,204,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Points","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"Team","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"1422847d90a23":{"x":{},"y":{},"colour":{},"type":"scatter"},"142287a28a4ae":{"x":{},"y":{},"colour":{}},"14228253da2a":{"x":{},"y":{},"colour":{}},"142284f17fc97":{"x":{},"y":{},"colour":{}},"142282fc84612":{"x":{},"y":{},"colour":{}},"142285706040":{"x":{},"y":{},"colour":{}}},"cur_data":"1422847d90a23","visdat":{"1422847d90a23":["function (y) ","x"],"142287a28a4ae":["function (y) ","x"],"14228253da2a":["function (y) ","x"],"142284f17fc97":["function (y) ","x"],"142282fc84612":["function (y) ","x"],"142285706040":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p><strong>Note:</strong> Jonquel Jones and Alyssa Thomas were Connecticut’s top two scorers by points per game over the course of the playoffs. Chelsea Gray and A’ja Wilson were Las Vegas’ top two scorers by points per game over the course of the playoffs.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
