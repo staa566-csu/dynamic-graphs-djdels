@@ -2,6 +2,7 @@
 title: "STAA 566 Dynamic Figure"
 author: "Delsie Johnson"
 format: html
+html:
 editor: visual
 ---
 
@@ -78,7 +79,7 @@ p_playoffs_plotly <- p_playoffs_plotly %>% # adding subtitle using HTML to forma
 
 ## Save Figure as PDF
 
-```{r}
+```{r save as pdf}
 pdf("WNBA_playoffs.pdf", heigh=6, width=8)
 print(p_playoffs_plotly)
 dev.off()
@@ -86,7 +87,7 @@ dev.off()
 
 ## Display Dynamic Figure in HTML:
 
-```{r}
+```{r display}
 p_playoffs_plotly
 ```
 
